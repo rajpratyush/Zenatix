@@ -1,0 +1,152 @@
+{
+  "attributes": {
+    "fieldAttrs": "{}",
+    "fields": "[]",
+    "runtimeFieldMap": "{}",
+    "title": "processes*",
+    "typeMeta": "{}"
+  },
+  "coreMigrationVersion": "7.15.0",
+  "id": "d4c08510-1e4b-11ec-bf49-c1bb891df0a5",
+  "migrationVersion": {
+    "index-pattern": "7.11.0"
+  },
+  "references": [],
+  "type": "index-pattern",
+  "updated_at": "2021-09-25T21:59:18.241Z",
+  "version": "WzkzMiwzXQ=="
+}
+{
+  "attributes": {
+    "description": "",
+    "state": {
+      "datasourceStates": {
+        "indexpattern": {
+          "layers": {
+            "2dfca1de-2ca8-44b1-9b67-db93bfaa4a77": {
+              "columnOrder": [
+                "cc0346b7-524e-44ca-8c1d-3470e0f77b3f",
+                "4c0bebc6-ddad-44a6-8bd4-33c37934bda5"
+              ],
+              "columns": {
+                "4c0bebc6-ddad-44a6-8bd4-33c37934bda5": {
+                  "dataType": "number",
+                  "isBucketed": false,
+                  "label": "99th percentile of Memory Usage",
+                  "operationType": "percentile",
+                  "params": {
+                    "percentile": 99
+                  },
+                  "scale": "ratio",
+                  "sourceField": "Memory Usage"
+                },
+                "cc0346b7-524e-44ca-8c1d-3470e0f77b3f": {
+                  "dataType": "number",
+                  "isBucketed": true,
+                  "label": "Top values of PID",
+                  "operationType": "terms",
+                  "params": {
+                    "missingBucket": false,
+                    "orderBy": {
+                      "fallback": false,
+                      "type": "alphabetical"
+                    },
+                    "orderDirection": "asc",
+                    "otherBucket": true,
+                    "size": 1000
+                  },
+                  "scale": "ordinal",
+                  "sourceField": "PID"
+                }
+              },
+              "incompleteColumns": {}
+            }
+          }
+        }
+      },
+      "filters": [],
+      "query": {
+        "language": "kuery",
+        "query": ""
+      },
+      "visualization": {
+        "axisTitlesVisibilitySettings": {
+          "x": true,
+          "yLeft": true,
+          "yRight": true
+        },
+        "curveType": "CURVE_MONOTONE_X",
+        "fittingFunction": "None",
+        "gridlinesVisibilitySettings": {
+          "x": true,
+          "yLeft": true,
+          "yRight": true
+        },
+        "labelsOrientation": {
+          "x": 0,
+          "yLeft": 0,
+          "yRight": 0
+        },
+        "layers": [
+          {
+            "accessors": [
+              "4c0bebc6-ddad-44a6-8bd4-33c37934bda5"
+            ],
+            "layerId": "2dfca1de-2ca8-44b1-9b67-db93bfaa4a77",
+            "layerType": "data",
+            "position": "top",
+            "seriesType": "line",
+            "showGridlines": false,
+            "xAccessor": "cc0346b7-524e-44ca-8c1d-3470e0f77b3f"
+          }
+        ],
+        "legend": {
+          "isVisible": true,
+          "position": "right"
+        },
+        "preferredSeriesType": "line",
+        "tickLabelsVisibilitySettings": {
+          "x": true,
+          "yLeft": true,
+          "yRight": true
+        },
+        "valueLabels": "hide",
+        "yLeftExtent": {
+          "mode": "full"
+        },
+        "yRightExtent": {
+          "mode": "full"
+        }
+      }
+    },
+    "title": "Main",
+    "visualizationType": "lnsXY"
+  },
+  "coreMigrationVersion": "7.15.0",
+  "id": "63bf9440-1f05-11ec-b47e-1386bb75e775",
+  "migrationVersion": {
+    "lens": "7.15.0"
+  },
+  "references": [
+    {
+      "id": "d4c08510-1e4b-11ec-bf49-c1bb891df0a5",
+      "name": "indexpattern-datasource-current-indexpattern",
+      "type": "index-pattern"
+    },
+    {
+      "id": "d4c08510-1e4b-11ec-bf49-c1bb891df0a5",
+      "name": "indexpattern-datasource-layer-2dfca1de-2ca8-44b1-9b67-db93bfaa4a77",
+      "type": "index-pattern"
+    }
+  ],
+  "type": "lens",
+  "updated_at": "2021-09-26T20:07:35.044Z",
+  "version": "WzE1ODEsM10="
+}
+{
+  "excludedObjects": [],
+  "excludedObjectsCount": 0,
+  "exportedCount": 2,
+  "missingRefCount": 0,
+  "missingReferences": []
+}

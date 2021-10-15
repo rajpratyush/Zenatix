@@ -1,0 +1,43 @@
+// Command : GET processes/_mapping
+
+{
+  "processes" : {
+    "mappings" : {
+      "properties" : {
+        "CPU in Use" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "Memory Usage" : {
+          "type" : "float"
+        },
+        "Memory in Use" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "Name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "PID" : {
+          "type" : "long"
+        }
+      }
+    }
+  }
+}
